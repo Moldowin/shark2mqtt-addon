@@ -16,6 +16,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY run.sh /run.sh
+COPY patch_goto.py /tmp/patch_goto.py
+RUN python /tmp/patch_goto.py /app/src/shark_auth.py && rm /tmp/patch_goto.py
 RUN chmod 755 /run.sh
 
 ENV PYTHONUNBUFFERED=1

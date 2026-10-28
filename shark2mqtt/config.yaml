@@ -1,8 +1,8 @@
-name: Shark2MQTT
-version: "1.0.8"
+name: Shark2MQTT (patched)
+version: "1.0.8-hermes1"
 slug: shark2mqtt
 description: Bridge SharkNinja robot vacuums to Home Assistant via MQTT autodiscovery.
-url: https://github.com/400HPMustang/shark2mqtt-addon
+url: https://github.com/Moldowin/shark2mqtt-addon
 arch:
   - amd64
   - aarch64

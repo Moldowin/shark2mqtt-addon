@@ -192,6 +192,9 @@ shutdown() {
 trap cleanup_xvfb EXIT
 trap shutdown INT TERM
 
+# Let the container network settle before Chromium starts (avoids ERR_NETWORK_CHANGED).
+sleep 5
+
 log "Starting upstream shark2mqtt..."
 
 python -m src.main "$@" &
